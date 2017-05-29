@@ -1,0 +1,164 @@
+at(p).
+at(q).
+at(r).
+
+:- op(200, fy, neg).
+:- op(400, xfy, and).
+:- op(600, xfy, v).
+:- op(800, xfy, if).
+:- op(1000, xfy, iff).
+:- op(1100, xfy, imp).
+
+
+%%%%%    V A R I O S
+imprimeL([]).
+
+imprimeL([X|L]) :- write(X),nl,
+                    imprimeL(L).
+
+% Saber si un elemento es miembro de una lista
+miembro(X,[X|Ys]).
+miembro(X,[Y|Ys]):-miembro(X,Ys).
+
+comunes([],Xs,[]).
+comunes([X|Xs],Ys,[X|Zs]):- miembro(X,Ys),% comprueba si X es miembro de Ys
+                            comunes(Xs,Ys,Zs).
+
+% comprueba que X no es miembro de Ys
+comunes([X|Xs],Ys,Zs):- not(miembro(X,Ys)),comunes(Xs,Ys,Zs).
+
+%obtener tamaño de una lista
+tamano([],0).
+tamano([_|A],N):- tamano(A,B), N is B+1.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    S U B F O R M U L A S (Regresa una lista con las subcadenas.)
+
+subf(X,[X]):-at(X).
+
+subf(neg F,[neg F | T]):-subf(F,T).
+
+
+subf(F1 v F2,[F1 v F2 | T]):-   subf(F1,T1),
+                                subf(F2,T2),
+                                union(T1,T2,T).
+
+subf(F1 and F2,[F1 and F2 | T]):-   subf(F1,T1),
+                                    subf(F2,T2),
+                                    union(T1,T2,T).
+
+subf(F1 if F2,[F1 if F2 | T]):-   subf(F1,T1),
+                                    subf(F2,T2),
+                                    union(T1,T2,T).
+
+subf(F1 iff F2,[F1 iff F2 | T]):-   subf(F1,T1),
+                                    subf(F2,T2),
+                                    union(T1,T2,T).
+subf(F1,F2,V):-subf(F1,L1),subf(F2,L2),
+                esMiembro(L1,L2).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        M O D E L    C H E C K I N G
+valorv(0).
+valorv(1).
+valor_de_verdad(v,0,0,0).
+valor_de_verdad(v,1,0,1).
+valor_de_verdad(v,0,1,1).
+valor_de_verdad(v,1,1,0).
+
+valor_de_verdad(and,0,0,0).
+valor_de_verdad(and,1,0,0).
+valor_de_verdad(and,0,1,0).
+valor_de_verdad(and,1,1,1).
+
+valor_de_verdad(neg,1,0).
+valor_de_verdad(neg,0,1).
+
+valorf(F, Mod, V) :-memberchk((F,V), Mod).
+valorf(neg A, Mod, V) :- valorf(A, Mod, VA), funcionv(neg, VA, V).
+valorf(F, Mod, V) :-  functor(F,Oper,2), arg(1,F,A), arg(2,F,B),
+                      valorf(A, Mod, VA),
+                      valorf(B, Mod, VB),
+                      valor_de_verdad(Oper, VA, VB, V).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% T R A D U C C I O N
+trad(F,F):-at(F).
+trad(neg F,neg F1):-trad(F,F1).
+trad(F1 v F2,L1 v L2):- trad(F1,L1),
+                        trad(F2,L2).
+
+
+trad(F1 and F2, neg (neg F1 v neg F2)):- trad(F1,L1),
+                                    trad(F2,L2).
+
+trad(F1 if F2, neg (L1) v (L2)):-   trad(F1,L1),
+                                    trad(F2,L2).
+
+trad(F1 iff F2, neg(neg L1 v neg L2)):-   trad(F1 if F2,L1), trad(F2 if F1,L2).
+                  %      trad(L1 and L2,L3).
+
+%%%%%%%%%%%%%%%%%%%%%   S E Q U E N T    C A L C U L U S
+%--sequent(F,[imp|L]):-trad(F,L).
+
+agregar(F, nil imp F).
+
+sequent(F,F):-at(F),!.
+sequent(neg F,neg V):-sequent(F,V).
+sequent(neg neg F, L):-sequent(F,L).
+%sequent(F, L):-trad(F,L1), agregar(L1,L2), sequent(L2,L).
+sequent(F1 v F2,[L1,L2|_ ] ):-sequent(F1,L1),sequent(F2,L2).
+%sequent(F1)
+
+%sequent(F) :-       trad(F,L1), agregar(L1,L2),
+%                    functor(L2,Op,2), arg(1,L2,I), arg(2,L2,D),
+%                    %equal(Op,imp),
+                    %sequent(I, FI),
+ %                   sequent(D, FD),
+ %                   write FD,nl,
+ %                   comunes(FI,FD,C),
+ %                   tamano(C,T),
+ %                   T > 0.
+sequent(F):-              trad(F,FT),sequent([],FT).
+sequent(F1,F2):-          not(intersection(F1,F2,[])),sequent(F1,F2).
+sequent(F1,[neg X|T]):-   sequent([F1|_,X],[T]).
+sequent(F1,[ F2 v F3|T]):-cambia(F2,F3, F4),
+                          sequent(F1,F4).
+
+
+cambia(F1,F2,[F1,F2|_]).
+agrega(F,X,[F,X]).
+
+%miembro(X,[X|Ys]).
+%miembro(X,[Y|Ys]):-miembro(X,Ys).
+
+%comunes([],Xs,[]).
+%comunes([X|Xs],Ys,[X|Zs]):- miembro(X,Ys),% comprueba si X es miembro de Ys
+%                            comunes(Xs,Ys,Zs).
+
+% comprueba que X no es miembro de Ys
+%comunes([X|Xs],Ys,Zs):- not(miembro(X,Ys)),comunes(Xs,Ys,Zs).
+
+%obtener tamaño de una lista
+%tamano([],0).
+%tamano([_|A],N):- tamano(A,B), N is B+1.
+
+
+
+
+                    %equal(Op,imp),
+
+
+
+
+
+%sequent(F,F):-at(F),!.
+%sequent(F)
+%sequuent(neg neg F, F):- at(F).
+%sequent(F1 v F2,[F1,F2 |_]).
+
+
+%arbol(vacio)

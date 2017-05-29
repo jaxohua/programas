@@ -1,0 +1,19 @@
+:- op(610, fy, -).
+:- op(630, xfy, v).
+valorv(0).
+valorv(1).
+funcionv(v,0,0,0):- !.
+funcionv(v,_,_,1):- !.
+funcionv(-,1,0).
+funcionv(-,0,1).
+valorf(F, I, V) :-memberchk((F,V), I).
+valorf(-A, I, V) :- valorf(A, I, VA), funcionv(-, VA, V).
+valorf(F, I, V) :-  functor(F,Op,2), arg(1,F,A), arg(2,F,B),
+                    valorf(A, I, VA),
+                    valorf(B, I, VB),
+                    funcionv(Op, VA, VB, V).
+
+
+
+%main:- valorf(-p,[(p,1)],V) writef('%t\n', [V]).
+%main:- valorf((p v q) v (-q v r),[(p,1),(q,0),(r,1)],V) writef('%t \n',[V]).

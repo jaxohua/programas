@@ -1,0 +1,12 @@
+Archivo con cadena inicial: [p]
+\AxiomC{$p \fCenter p$}
+\solidLine
+\AxiomC{$p\AxiomC{$p\AxiomC{$\AxiomC{$p \fCenter p$}
+\solidLine
+\AxiomC{$p \fCenter p$}
+\solidLine
+\AxiomC{$p \fCenter p$}
+\solidLine
+\AxiomC{$\AxiomC{$p \fCenter p$}
+\solidLine
+\AxiomC{$p

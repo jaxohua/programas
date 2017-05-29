@@ -1,0 +1,14 @@
+at(p).
+at(q).
+at(r).
+:- op(610, fy, -).
+:- op(630, xfy, v).
+formula(X):- at(X).
+formula(-(X)) :- formula(X).
+formula(v(X,Y)) :- formula(X),formula(Y).
+
+subformula(X,X) :- formula(X).
+subformula(X,Y) :- formula(X),formula(Y).
+subformula(-(X),Y) :- subformula(X,Y).
+subformula(v(X,_Y),Z) :- subformula(X,Z).
+subformula(v(_X,Y),Z) :- subformula(Y,Z).

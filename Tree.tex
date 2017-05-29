@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{bussproofs}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\def\fCenter{{\mbox{\Large$\rightarrow$}}}
+\EnableBpAbbreviations
+\begin{document}
+\begin{prooftree}
+\def\fCenter{\ \vdash\ }
+\AxiomC{$p ( \neg  \neg p \lor q)  \fCenter p$}
+\solidLine
+\UnaryInfC{$ ( \neg  \neg p \lor q)  \fCenter  \neg pp$}
+\solidLine
+\UnaryInfC{$ \neg  \neg p ( \neg  \neg p \lor q)  \fCenter p$}
+\solidLine
+\AxiomC{$p \fCenter qp$}
+\solidLine
+\UnaryInfC{$ \fCenter  \neg pqp$}
+\solidLine
+\UnaryInfC{$ \neg  \neg p \fCenter qp$}
+\solidLine
+\AxiomC{$q \fCenter qp$}
+\solidLine
+\BinaryInfC{$ ( \neg  \neg p \lor q)  \fCenter qp$}
+\solidLine
+\UnaryInfC{$ \neg q ( \neg  \neg p \lor q)  \fCenter p$}
+\solidLine
+\BinaryInfC{$ ( \neg  \neg p \lor  \neg q)  ( \neg  \neg p \lor q)  \fCenter p$}
+\solidLine
+\UnaryInfC{$ ( \neg  \neg p \lor q)  \fCenter  \neg  ( \neg  \neg p \lor  \neg q) p$}
+\solidLine
+\UnaryInfC{$ \fCenter  \neg  ( \neg  \neg p \lor q)  \neg  ( \neg  \neg p \lor  \neg q) p$}
+\solidLine
+\UnaryInfC{$ \fCenter  ( \neg  ( \neg  \neg p \lor q)  \lor  \neg  ( \neg  \neg p \lor  \neg q) ) p$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg  ( \neg  \neg p \lor q)  \lor  \neg  ( \neg  \neg p \lor  \neg q) )  \fCenter p$}
+\solidLine
+\UnaryInfC{$ \fCenter  \neg  \neg  ( \neg  ( \neg  \neg p \lor q)  \lor  \neg  ( \neg  \neg p \lor  \neg q) ) p$}
+\solidLine
+\UnaryInfC{$ \fCenter  ( \neg  \neg  ( \neg  ( \neg  \neg p \lor q)  \lor  \neg  ( \neg  \neg p \lor  \neg q) )  \lor p) $}
+\solidLine
+\end{prooftree}
+\end{document}
