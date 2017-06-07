@@ -30,26 +30,31 @@ sequent(Li,Ld):-not(intersection(Li,Ld,[])),escribeAxioma(Li,Ld),
 write(Li), write(' -> '), write(Ld),nl.%imprimeAxioma(Li,Ld).    % Caso base.
 
 sequent(Li,[neg P|T]):-sequent([P|Li],T),
-                        write(Li), write(' -> '), write([neg P|T]),nl,escribeUnario(Li,[neg P|T]).       % Negacion lado derecho
+                        write(Li), write(' -> '), write([neg P|T]),nl,
+                        escribeUnario(Li,[neg P|T]).       % Negacion lado derecho
 
-sequent([neg P|T],Ld):-sequent(T,[P|Ld]),write([neg P|T]),write('-->'),write(Ld),escribeUnario([neg P|T],Ld).       % Negacion lado izquierdo
+sequent([neg P|T],Ld):-sequent(T,[P|Ld]),
+                write([neg P|T]),write('-->'),write(Ld),
+                escribeUnario([neg P|T],Ld).       % Negacion lado izquierdo
 
-sequent(Li,[P v Q|T]):-sequent(Li,[P,Q|T]),write(Li),write('-->'),write([ P v Q|T]),nl,escribeUnario(Li,[P v Q|T]).    % Disyuncion lado derecho
+sequent(Li,[P v Q|T]):-sequent(Li,[P,Q|T]),
+                        write(Li),write('-->'),write([ P v Q|T]),nl,
+                        escribeUnario(Li,[P v Q|T]).    % Disyuncion lado derecho
 
-sequent([P v Q|T],Ld):-sequent([P|T],Ld),sequent([Q|T],Ld),write([ P v Q|T]),write('-->'),write(Ld),nl,escribeBinario([P v Q|T],Ld).   % Disyuncion lado izquierdo
+sequent([P v Q|T],Ld):-sequent([P|T],Ld),sequent([Q|T],Ld),
+                        write([ P v Q|T]),write('-->'),write(Ld),nl,
+                        escribeBinario([P v Q|T],Ld).   % Disyuncion lado izquierdo
 
-sequent(Li,Ld):-circularQueue(Ld,Ldr),write(Li),write('  |-  '),write(Ldr),nl,sequent(Li,Ldr).  % Rotar lista derecha
+sequent(Li,Ld):-mueve(Ld,LM),
+                write(Li),write('-->'),write(LM),nl,
+                sequent(Li,LM).  % Rotar lista derecha
 
-sequent(Li,Ld):-circularQueue(Li,Lir),write(Lir),write('  |-  '),write(Ld),nl,sequent(Lir,Ld).  % Rotar lista izquierda
+sequent(Li,Ld):-mueve(Li,LM),
+                write(LM),write('-->'),write(Ld),nl,
+                sequent(LM,Ld).  % Rotar lista izquierda
 
-circularQueue([H|T],L):-not(atomica([H|T])),at(H),append(H,T,L).
+mueve([H|T],L):-not(atomica([H|T])),at(H),append(H,T,L).
 
-
-%cambiaLista(String,[]):-write(String,'').
-%cambiaLista(String,[H|_]):-at(H),write(String,H).
-%cambiaLista(String,[neg P|T]):-write(String,'\\neg'),cambiaLista(String,P),write(String,' , '),cambiaLista(String,T).
-%cambiaLista(P,String),cambiaLista(T,String).
-%cambiaLista(String,[P v Q|T]):-cambiaLista(String,P),write(String,' \\vee '),cambiaLista(String,Q),write(String,' , '),cambiaLista(String,T).
 
 atomica([]).
 atomica([X|T]):- at(X), atomica(T).
@@ -57,7 +62,7 @@ vacia([]).
 validaT(T,Buffer):-not(vacia(T)), write(Buffer,',').
 
 
-%Genera archivo PDF
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       GENERA pdflatex                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  encabezado:-   working_directory(_,'/Users/4x/Google-Drive/DICC/2-Semestre/Cursos/MetodosFormales/programas'),
                 open('Tree.tex',write,Buffer),
                 write(Buffer,'\\documentclass[12pt,landscape]{article}'),  nl(Buffer),
@@ -106,9 +111,7 @@ final:-         working_directory(_,'/Users/4x/Google-Drive/DICC/2-Semestre/Curs
                 write(Buffer,'\\end{prooftree}'),nl(Buffer),
                 write(Buffer,'\\end{document}'),nl(Buffer),
                 close(Buffer).
-                %shell('pdflatex Tree.tex',R),
-                %shell('open Tree.pdf',R),
-                %write(R),nl.
+
 
 
 imprimirLista([],_).
