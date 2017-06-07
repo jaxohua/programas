@@ -1,0 +1,14 @@
+#!/bin/bash
+# init
+cd /Users/4x/Google-Drive/DICC/2-Semestre/Cursos/MetodosFormales/programas
+pdflatex Tree.tex
+open Tree.pdf
+#adb reboot
+#echo "Terminado, espera a que finalice"
+#adb reboot-botloader
+#pause 'Espera a que cambie modalidad y presiona [Enter]...'
+#echo "Listando dispositivos conectados"
+#./adb fastboot devices
+#./fastboot reboot
+#pause 'Press [Enter] key to continue...'
+# rest of the script
