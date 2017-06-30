@@ -1,0 +1,1 @@
+[(x>0)and(y>0)imp[x<y imp (true dimp (x>=0)and(y>=0))]]

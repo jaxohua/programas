@@ -7,37 +7,45 @@
 \begin{document}
 \begin{prooftree}
 \def\fCenter{\ \vdash\ }
-\AxiomC{$p, ( \neg  \neg p \lor q)  \fCenter p$}
+\AxiomC{$ \neg p \fCenter q, \neg p$}
 \solidLine
-\UnaryInfC{$ ( \neg  \neg p \lor q)  \fCenter  \neg p,p$}
+\AxiomC{$q \fCenter q, \neg p$}
 \solidLine
-\UnaryInfC{$ \neg  \neg p, ( \neg  \neg p \lor q)  \fCenter p$}
+\BinaryInfC{$ ( \neg p \lor q)  \fCenter q, \neg p$}
 \solidLine
-\AxiomC{$p \fCenter q,p$}
+\UnaryInfC{$ \neg q, ( \neg p \lor q)  \fCenter  \neg p$}
 \solidLine
-\UnaryInfC{$ \fCenter  \neg p,qp$}
+\UnaryInfC{$ ( \neg p \lor q)  \fCenter  \neg  \neg q, \neg p$}
 \solidLine
-\UnaryInfC{$ \neg  \neg p \fCenter q,p$}
+\UnaryInfC{$ ( \neg p \lor q)  \fCenter  ( \neg  \neg q \lor  \neg p) $}
 \solidLine
-\AxiomC{$q \fCenter q,p$}
+\UnaryInfC{$ \fCenter  \neg  ( \neg p \lor q) , ( \neg  \neg q \lor  \neg p) $}
 \solidLine
-\BinaryInfC{$ ( \neg  \neg p \lor q)  \fCenter q,p$}
+\UnaryInfC{$ \fCenter  ( \neg  ( \neg p \lor q)  \lor  ( \neg  \neg q \lor  \neg p) ) $}
 \solidLine
-\UnaryInfC{$ \neg q, ( \neg  \neg p \lor q)  \fCenter p$}
+\UnaryInfC{$ \neg  ( \neg  ( \neg p \lor q)  \lor  ( \neg  \neg q \lor  \neg p) )  \fCenter $}
 \solidLine
-\BinaryInfC{$ ( \neg  \neg p \lor  \neg q) , ( \neg  \neg p \lor q)  \fCenter p$}
+\AxiomC{$q \fCenter  \neg p,q$}
 \solidLine
-\UnaryInfC{$ ( \neg  \neg p \lor q)  \fCenter  \neg  ( \neg  \neg p \lor  \neg q) ,p$}
+\UnaryInfC{$ \fCenter  \neg q, \neg pq$}
 \solidLine
-\UnaryInfC{$ \fCenter  \neg  ( \neg  \neg p \lor q) , \neg  ( \neg  \neg p \lor  \neg q) p$}
+\UnaryInfC{$ \neg  \neg q \fCenter  \neg p,q$}
 \solidLine
-\UnaryInfC{$ \fCenter  ( \neg  ( \neg  \neg p \lor q)  \lor  \neg  ( \neg  \neg p \lor  \neg q) ) ,p$}
+\AxiomC{$ \neg p \fCenter  \neg p,q$}
 \solidLine
-\UnaryInfC{$ \neg  ( \neg  ( \neg  \neg p \lor q)  \lor  \neg  ( \neg  \neg p \lor  \neg q) )  \fCenter p$}
+\BinaryInfC{$ ( \neg  \neg q \lor  \neg p)  \fCenter  \neg p,q$}
 \solidLine
-\UnaryInfC{$ \fCenter  \neg  \neg  ( \neg  ( \neg  \neg p \lor q)  \lor  \neg  ( \neg  \neg p \lor  \neg q) ) ,p$}
+\UnaryInfC{$ ( \neg  \neg q \lor  \neg p)  \fCenter  ( \neg p \lor q) $}
 \solidLine
-\UnaryInfC{$ \fCenter  ( \neg  \neg  ( \neg  ( \neg  \neg p \lor q)  \lor  \neg  ( \neg  \neg p \lor  \neg q) )  \lor p) $}
+\UnaryInfC{$ \fCenter  \neg  ( \neg  \neg q \lor  \neg p) , ( \neg p \lor q) $}
+\solidLine
+\UnaryInfC{$ \fCenter  ( \neg  ( \neg  \neg q \lor  \neg p)  \lor  ( \neg p \lor q) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg  ( \neg  \neg q \lor  \neg p)  \lor  ( \neg p \lor q) )  \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ( \neg  ( \neg p \lor q)  \lor  ( \neg  \neg q \lor  \neg p) )  \lor  \neg  ( \neg  ( \neg  \neg q \lor  \neg p)  \lor  ( \neg p \lor q) ) )  \fCenter $}
+\solidLine
+\UnaryInfC{$ \fCenter  \neg  ( \neg  ( \neg  ( \neg p \lor q)  \lor  ( \neg  \neg q \lor  \neg p) )  \lor  \neg  ( \neg  ( \neg  \neg q \lor  \neg p)  \lor  ( \neg p \lor q) ) ) $}
 \solidLine
 \end{prooftree}
 \end{document}

@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.8.18)  8 JUN 2017 13:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.8.18)  22 JUN 2017 12:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Tree.tex
-(./Tree.tex
+**Arbol-PrimerOrden.tex
+(./Arbol-PrimerOrden.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -65,8 +65,9 @@ Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
-) (./Tree.aux)
-\openout1 = `Tree.aux'.
+)
+(./Arbol-PrimerOrden.aux)
+\openout1 = `Arbol-PrimerOrden.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -99,31 +100,27 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 10.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-\myBox2=\box33
-\myScoreStart2=\dimen122
-\myCenter2=\dimen123
-\myScoreEnd2=\dimen124
-\myBox3=\box34
-\myScoreStart3=\dimen125
-\myCenter3=\dimen126
-\myScoreEnd3=\dimen127
- [1
+Overfull \hbox (48.50041pt too wide) in paragraph at lines 8--16
+ [] 
+ []
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Tree
-.aux) ) 
+[1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./Arbol-PrimerOrden.aux) ) 
 Here is how much of TeX's memory you used:
- 710 strings out of 493013
- 8074 string characters out of 6133343
- 64530 words of memory out of 5000000
- 4300 multiletter control sequences out of 15000+600000
+ 702 strings out of 493013
+ 8113 string characters out of 6133343
+ 59530 words of memory out of 5000000
+ 4292 multiletter control sequences out of 15000+600000
  8603 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 25i,4n,26p,205b,213s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-2.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb>
-Output written on Tree.pdf (1 page, 25593 bytes).
+ 25i,4n,26p,268b,159s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb>
+Output written on Arbol-PrimerOrden.pdf (1 page, 27502 bytes).
 PDF statistics:
  20 PDF objects out of 1000 (max. 8388607)
  13 compressed objects within 1 object stream

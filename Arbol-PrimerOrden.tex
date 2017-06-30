@@ -1,0 +1,2383 @@
+\documentclass[12pt,landscape]{article}
+\usepackage{bussproofs}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\def\fCenter{{\mbox{\Large$\rightarrow$}}}
+\EnableBpAbbreviations
+\begin{document}
+\begin{prooftree}
+\def\fCenter{\ \vdash\ }
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0] \fCenter  \neg [mayor,y,0], \neg p \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y] \fCenter  \neg [mayor,x,0], \neg [mayor,y,0] \neg p$}
+\solidLine
+\UnaryInfC{$[menor,x,y] \fCenter  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) , \neg p \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$p,[menor,x,y][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,p[menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,p[menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$p,[menor,x,y][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg p, \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg p \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter  \neg [mayor,y,0],[mayor,x,0][igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  \neg [mayor,x,0], \neg [mayor,y,0][mayor,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[mayor,x,0][igual,x,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter  \neg [mayor,y,0],[mayor,y,0][igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  \neg [mayor,x,0], \neg [mayor,y,0][mayor,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[mayor,y,0][igual,y,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter  \neg [mayor,y,0],[mayor,x,0][igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  \neg [mayor,x,0], \neg [mayor,y,0][mayor,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[mayor,x,0][igual,x,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter  \neg [mayor,y,0],[mayor,y,0][igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  \neg [mayor,x,0], \neg [mayor,y,0][mayor,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[mayor,y,0][igual,y,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter  \neg [mayor,y,0],[mayor,x,0][igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  \neg [mayor,x,0], \neg [mayor,y,0][mayor,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[mayor,x,0][igual,x,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter  \neg [mayor,y,0],[mayor,y,0][igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  \neg [mayor,x,0], \neg [mayor,y,0][mayor,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[mayor,y,0][igual,y,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter  \neg [mayor,y,0],[mayor,x,0][igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  \neg [mayor,x,0], \neg [mayor,y,0][mayor,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[mayor,x,0][igual,x,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y][mayor,x,0] \fCenter  \neg [mayor,y,0],[mayor,y,0][igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  \neg [mayor,x,0], \neg [mayor,y,0][mayor,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,y] \fCenter  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[mayor,y,0][igual,y,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y][mayor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) ,[menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) , \neg  ( \neg [mayor,x,0] \lor  \neg [mayor,y,0]) [menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[menor,x,y][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[menor,x,y][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][menor,x,y] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,x,0],[mayor,y,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,x,0][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,x,0][mayor,y,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[mayor,y,0],[mayor,x,0][menor,x,y] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[mayor,y,0][mayor,x,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,x,0],[igual,x,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,x,0] \lor [igual,x,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,x,0] \lor [igual,x,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\AxiomC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter [mayor,y,0],[igual,y,0]$}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ([mayor,y,0] \lor [igual,y,0]) $}
+\solidLine
+\UnaryInfC{$ \neg  ([mayor,y,0] \lor [igual,y,0]) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\BinaryInfC{$ ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  \neg [mayor,x,y], \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) $}
+\solidLine
+\UnaryInfC{$[menor,x,y],[mayor,y,0][mayor,x,0] \fCenter  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) $}
+\solidLine
+\UnaryInfC{$ \neg  ( \neg [mayor,x,y] \lor  \neg  ( \neg  ([mayor,x,0] \lor [igual,x,0])  \lor  \neg  ([mayor,y,0] \lor [igual,y,0]) ) ) ,[menor,x,y][mayor,y,0] \fCenter $}
+\solidLine
